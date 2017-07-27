@@ -1,0 +1,26 @@
+{
+  "name": "fcc_algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "babel": {
+    "presets": [
+      "env",
+      "stage-1"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "author": "Brandon Dionisio",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "html-webpack-plugin": "^2.29.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}
