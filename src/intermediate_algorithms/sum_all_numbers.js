@@ -17,7 +17,7 @@ function sumAll(arr) {
 
   return arr.reduce((prev, next) => {
     return prev + next;
-  }, 0)
+  }, 0);
 }
 
 console.log(sumAll([5, 10]))
