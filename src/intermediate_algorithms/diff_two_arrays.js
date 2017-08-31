@@ -3,34 +3,12 @@ Compare two arrays and return a new array with any items only found in one of th
 */
 
 function diffArray(arr1, arr2) {
-  var newArr = [];
-
-  arr1.forEach(function(num){
-    if (arr2.indexOf(num) === -1) {
-      newArr.push(num);
-    }
+  const combinedArrays = [...arr1, ...arr2];
+  return combinedArrays.filter(function(number) {
+    return arr1.indexOf(number) == -1 || arr2.indexOf(number) == -1
+      ? number
+      : null;
   });
-
-  arr2.forEach(function(num){
-    if (arr1.indexOf(num) === -1) {
-      newArr.push(num);
-    }
-  });
-
-  return newArr;
 }
 
-console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); // = > 4
-
-
-// *** Declarative Solution
-function diffArray2(arr1, arr2) {
-    return arr1.filter(function(el){
-      return !arr2.includes(el);
-    }) // []
-    .concat(
-      arr2.filter(function(el){
-        return !arr1.includes(el);
-      })
-    );
-}
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); // => 4
